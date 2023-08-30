@@ -1,18 +1,15 @@
---- 
-interface Props {
-	title: string;
-}
-
-const { title } = Astro.props;
+---
+const title = "Nasa Images";
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description">
+		<meta name="description" content="Nasa Images Viewer" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/saturn.png" type="image/x-icon" />
+		<title>Nasa Images</title>
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
@@ -22,18 +19,26 @@ const { title } = Astro.props;
 </html>
 <style is:global>
 	:root {
-		--accent: 136, 58, 234;
+		--accent: 41, 196, 255;
 		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60%);
+		--accent-dark: 121, 68, 154;
+		--accent-gradient: linear-gradient(
+			45deg,
+			rgb(var(--accent)),
+			rgb(var(--accent-light)) 30%,
+			white 60%
+		);
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background: #13151A;
-		background-size: 224px;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
+		/* background: #13151a;
+		background-size: 224px; */
+		background-color: rgb(0, 0, 0);
+		background-image: radial-gradient(
+				circle at top right,
+				rgba(121, 68, 154, 0.13),
+				transparent
+			),
+			radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.13), transparent);
 	}
 </style>
