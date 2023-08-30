@@ -8,4 +8,6 @@ export default defineConfig({
 	adapter: node({
 		mode: "standalone",
 	}),
+	site: "https://jdcg00.github.io",
+	base: "/AstroNasaImages",
 });
